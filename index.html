@@ -4,9 +4,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AetherIQ Labs | Daily AI</title>
+
+<title>Daily AI | Smart AI Replies, Rewrite, Translate & Explain</title>
+<meta name="description" content="Daily AI helps you generate replies, rewrite messages, translate content, explain concepts and communicate smarter using AI.">
+<meta property="og:title" content="Daily AI">
+<meta property="og:description" content="Smart AI-powered communication assistant.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://atheriqlabs.org">
+<meta name="theme-color" content="#6d28d9">
 
 <style>
+
+:root{
+--bg:#f8fafc;
+--card:#ffffff;
+--text:#0f172a;
+--muted:#64748b;
+--border:#e2e8f0;
+--grad:linear-gradient(135deg,#2D8CFF,#C73AE8);
+}
+
+.dark{
+--bg:#0f172a;
+--card:#1e293b;
+--text:#f8fafc;
+--muted:#94a3b8;
+--border:#334155;
+}
 
 *{
 margin:0;
@@ -14,180 +38,484 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial,sans-serif;
-background:#F5F4EA;
-color:#222;
-line-height:1.7;
+font-family:Inter,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+transition:.3s;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(255,255,255,.9);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
+
+.dark nav{
+background:rgba(15,23,42,.95);
+}
+
+.nav-inner{
+height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:var(--text);
+font-weight:500;
+}
+
+.toggle{
+padding:8px 14px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+background:var(--grad);
+color:white;
 }
 
 .hero{
-background:#262600;
-color:white;
-padding:80px 20px;
+padding:100px 0;
+background:
+radial-gradient(circle at top left,#7c3aed22,transparent),
+radial-gradient(circle at bottom right,#2563eb22,transparent);
 }
 
-.hero-content{
-max-width:1100px;
-margin:auto;
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.badge{
+display:inline-block;
+background:#ede9fe;
+padding:10px 16px;
+border-radius:999px;
+margin-bottom:20px;
+font-size:14px;
+font-weight:600;
 }
 
 .hero h1{
-font-size:72px;
-margin-bottom:10px;
+font-size:64px;
+line-height:1.05;
+margin-bottom:20px;
+}
+
+.gradient{
+background:var(--grad);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
 font-size:20px;
-opacity:0.9;
-}
-
-.container{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-}
-
-.card{
-background:white;
-padding:40px;
-border-radius:14px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-h2{
-font-size:58px;
-margin-bottom:20px;
-}
-
-h3{
-margin-top:30px;
-margin-bottom:15px;
-}
-
-ul{
-padding-left:25px;
-}
-
-li{
-margin-bottom:10px;
-}
-
-.nav-links{
-margin-top:30px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
+color:var(--muted);
+margin-bottom:30px;
 }
 
 .btn{
-background:#262600;
-color:white;
-padding:12px 24px;
-border-radius:8px;
+display:inline-block;
+padding:14px 26px;
+border-radius:12px;
 text-decoration:none;
-font-weight:bold;
-}
-
-.btn:hover{
-opacity:.9;
-}
-
-.footer{
-background:#262600;
+font-weight:700;
+background:var(--grad);
 color:white;
-margin-top:80px;
 }
 
-.footer-content{
-max-width:1100px;
-margin:auto;
-padding:50px 20px;
+.phone-stack{
 display:flex;
-justify-content:space-between;
+justify-content:center;
+gap:20px;
 flex-wrap:wrap;
+}
+
+.phone{
+width:220px;
+background:#111;
+border-radius:35px;
+padding:12px;
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.phone img{
+width:100%;
+border-radius:25px;
+display:block;
+}
+
+.section{
+padding:90px 0;
+}
+
+.section-title{
+font-size:42px;
+text-align:center;
+margin-bottom:15px;
+}
+
+.section-sub{
+text-align:center;
+color:var(--muted);
+margin-bottom:50px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:24px;
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--border);
+padding:28px;
+border-radius:20px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:12px;
+}
+
+.card p{
+color:var(--muted);
+}
+
+.screens{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.screen{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:24px;
+padding:20px;
+text-align:center;
+}
+
+.screen img{
+width:100%;
+border-radius:18px;
+}
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+details{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:14px;
+padding:18px;
+margin-bottom:14px;
+}
+
+summary{
+cursor:pointer;
+font-weight:700;
+}
+
+footer{
+background:#111827;
+color:white;
+padding:60px 0;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
 gap:30px;
 }
 
-.footer h3{
-margin-bottom:10px;
+.footer-grid a{
+color:#cbd5e1;
+text-decoration:none;
+display:block;
+margin-bottom:8px;
 }
 
-.footer a{
-color:white;
-text-decoration:none;
+@media(max-width:900px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.screens{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
 }
 
 </style>
 
 </head>
+
 <body>
 
-<header class="hero">
-<div class="hero-content">
-<h1>AetherIQ Labs</h1>
-<p>
-Building practical AI tools that help people communicate,
-learn, and work more effectively.
-</p>
+<nav>
+<div class="container nav-inner">
+
+<div class="logo">Daily AI</div>
+
+<div class="nav-links">
+<a href="#features">Features</a>
+<a href="#screenshots">Screenshots</a>
+<a href="#faq">FAQ</a>
+<a href="/privacy/">Privacy</a>
+<a href="/terms/">Terms</a>
+<button class="toggle" onclick="toggleTheme()">🌙</button>
 </div>
-</header>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">AI-Powered Communication Assistant</div>
+
+<h1>
+Write Smarter
+<span class="gradient">Replies Instantly</span>
+</h1>
+
+<p>
+Generate messages, rewrite text, translate content,
+explain concepts and communicate confidently using AI.
+</p>
+
+<a class="btn" href="#">
+Coming Soon on App Store
+</a>
+
+</div>
+
+<div class="phone-stack">
+
+<div class="phone">
+<img src="images/screen1.png" alt="Daily AI Screenshot">
+</div>
+
+<div class="phone">
+<img src="images/screen2.png" alt="Daily AI Screenshot">
+</div>
+
+<div class="phone">
+<img src="images/screen3.png" alt="Daily AI Screenshot">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="features" class="section">
 
 <div class="container">
 
-<div class="card">
+<h2 class="section-title">Everything You Need</h2>
 
-<h2>Daily AI</h2>
-
-<p>
-Daily AI is an intelligent writing and conversation assistant designed
-to help users generate messages, improve communication,
-translate content, explain concepts, and interact with AI using
-both text and voice.
+<p class="section-sub">
+Designed to help you communicate faster and better.
 </p>
 
-<h3>Features</h3>
+<div class="features">
 
-<ul>
-<li>AI-powered message generation</li>
-<li>Voice-to-text input</li>
-<li>Multiple conversation styles and tones</li>
-<li>Translation and explanation tools</li>
-<li>Premium subscription plans</li>
-</ul>
+<div class="card">
+<h3>AI Replies</h3>
+<p>Create thoughtful responses instantly.</p>
+</div>
 
-<div class="nav-links">
-<a class="btn" href="/privacy/">Privacy Policy</a>
-<a class="btn" href="/terms/">Terms of Use</a>
+<div class="card">
+<h3>Rewrite Messages</h3>
+<p>Improve tone, clarity and professionalism.</p>
+</div>
+
+<div class="card">
+<h3>Voice Input</h3>
+<p>Speak naturally and let Daily AI do the rest.</p>
+</div>
+
+<div class="card">
+<h3>Translate</h3>
+<p>Translate content across multiple languages.</p>
+</div>
+
+<div class="card">
+<h3>Explain</h3>
+<p>Break down difficult concepts into simple language.</p>
+</div>
+
+<div class="card">
+<h3>Premium Features</h3>
+<p>Unlock advanced AI capabilities and unlimited usage.</p>
 </div>
 
 </div>
 
 </div>
 
-<footer class="footer">
+</section>
 
-<div class="footer-content">
+<section id="screenshots" class="section">
+
+<div class="container">
+
+<h2 class="section-title">App Screenshots</h2>
+
+<div class="screens">
+
+<div class="screen">
+<img src="images/screen1.png">
+</div>
+
+<div class="screen">
+<img src="images/screen2.png">
+</div>
+
+<div class="screen">
+<img src="images/screen3.png">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="faq" class="section">
+
+<div class="container">
+
+<h2 class="section-title">Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<details>
+<summary>What does Daily AI do?</summary>
+<p>Daily AI helps generate replies, rewrite text, translate content and explain concepts.</p>
+</details>
+
+<details>
+<summary>How does voice input work?</summary>
+<p>Speak naturally and Daily AI converts speech into text.</p>
+</details>
+
+<details>
+<summary>Are my messages private?</summary>
+<p>We implement reasonable measures to protect user information.</p>
+</details>
+
+<details>
+<summary>What is included in Premium?</summary>
+<p>Premium unlocks advanced features and extended usage.</p>
+</details>
+
+<details>
+<summary>Can I cancel anytime?</summary>
+<p>Yes. Subscriptions can be managed through Apple Account Settings.</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container footer-grid">
 
 <div>
-<h3>About Us</h3>
-<p>
-AetherIQ Labs Private Limited<br>
-Hyderabad, Telangana<br>
-India
-</p>
+<h3>Daily AI</h3>
+<p>Built by AetherIQ Labs Pvt Ltd.</p>
+</div>
+
+<div>
+<h3>Legal</h3>
+<a href="/privacy/">Privacy Policy</a>
+<a href="/terms/">Terms of Use</a>
 </div>
 
 <div>
 <h3>Contact</h3>
-<p>
-admin@atheriqlabs.org
-</p>
+<p>admin@atheriqlabs.org</p>
 </div>
 
 </div>
 
 </footer>
+
+<script>
+
+function toggleTheme(){
+document.body.classList.toggle('dark');
+localStorage.setItem(
+'theme',
+document.body.classList.contains('dark')
+?'dark'
+:'light'
+);
+}
+
+if(localStorage.getItem('theme')==='dark'){
+document.body.classList.add('dark');
+}
+
+</script>
 
 </body>
 </html>
