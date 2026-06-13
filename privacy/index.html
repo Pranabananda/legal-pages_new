@@ -4,107 +4,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Privacy Policy | Daily AI</title>
+<meta name="description" content="Privacy Policy for Daily AI by AetherIQ Labs Pvt Ltd">
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+--bg:#f8fafc;
+--card:#ffffff;
+--text:#0f172a;
+--muted:#64748b;
+--border:#e2e8f0;
+--grad:linear-gradient(135deg,#2D8CFF,#C73AE8);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
-font-family:Arial,sans-serif;
-background:#F5F4EA;
-color:#222;
-line-height:1.8;
+font-family:Inter,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
 }
 
-.hero{
-background:#262600;
-color:white;
-padding:60px 20px;
-}
-
-.hero-content{
-max-width:1100px;
-margin:auto;
-}
-
-.hero h1{
-font-size:52px;
+nav{
+position:sticky;
+top:0;
+background:white;
+border-bottom:1px solid var(--border);
+padding:18px 0;
+z-index:999;
 }
 
 .container{
-max-width:1100px;
+max-width:1000px;
 margin:auto;
-padding:50px 20px;
+padding:0 20px;
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+}
+
+.nav-links a{
+margin-left:20px;
+text-decoration:none;
+color:var(--text);
+}
+
+.hero{
+background:var(--grad);
+color:white;
+padding:80px 0;
+text-align:center;
+}
+
+.hero h1{
+font-size:54px;
 }
 
 .card{
-background:white;
+background:var(--card);
+margin-top:-40px;
+border-radius:24px;
 padding:50px;
-border-radius:14px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 h2{
-margin-top:30px;
-margin-bottom:15px;
+margin-top:35px;
+margin-bottom:12px;
+}
+
+p,li{
+line-height:1.8;
+color:#475569;
 }
 
 ul{
-padding-left:25px;
+padding-left:22px;
 }
 
-li{
-margin-bottom:8px;
-}
-
-.topnav{
-margin-top:15px;
-}
-
-.topnav a{
+footer{
+background:#111827;
 color:white;
-margin-right:20px;
-text-decoration:none;
-}
-
-.footer{
-background:#262600;
-color:white;
+padding:50px 0;
 margin-top:80px;
 }
 
-.footer-content{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.card{
+padding:28px;
+}
+
+.nav-links{
+display:none;
+}
+
 }
 
 </style>
 
 </head>
+
 <body>
 
-<header class="hero">
-<div class="hero-content">
-<h1>Privacy Policy</h1>
+<nav>
+<div class="container nav-inner">
+<div class="logo">Daily AI</div>
 
-<div class="topnav">
+<div class="nav-links">
 <a href="/">Home</a>
-<a href="/terms/">Terms of Use</a>
+<a href="/terms/">Terms</a>
 </div>
+</div>
+</nav>
 
+<section class="hero">
+<div class="container">
+<h1>Privacy Policy</h1>
+<p>Last Updated: June 2026</p>
 </div>
-</header>
+</section>
 
 <div class="container">
 
 <div class="card">
-
-<p><strong>Effective Date:</strong> June 2026</p>
 
 <p>
 AetherIQ Labs Private Limited ("AetherIQ Labs", "we", "our", or "us")
@@ -133,7 +174,7 @@ operates the Daily AI mobile application.
 <h2>Authentication Services</h2>
 
 <p>
-Daily AI uses Firebase Authentication to allow users to securely sign in and access application features.
+Daily AI uses Firebase Authentication to allow users to securely sign in.
 </p>
 
 <h2>Third-Party Services</h2>
@@ -154,7 +195,8 @@ We do not receive or store payment card information.
 <h2>Data Security</h2>
 
 <p>
-We implement reasonable technical and organizational measures to protect user information.
+We implement reasonable technical and organizational measures
+to protect user information.
 </p>
 
 <h2>Children's Privacy</h2>
@@ -166,14 +208,15 @@ The application is not intended for children under 13 years of age.
 <h2>Data Retention</h2>
 
 <p>
-We retain information only for as long as necessary to provide services,
+We retain information only as long as necessary to provide services,
 comply with legal obligations, and improve our products.
 </p>
 
 <h2>Your Rights</h2>
 
 <p>
-Depending on your jurisdiction, you may have rights to access, update,
+Depending on your jurisdiction,
+you may have rights to access, update,
 or request deletion of certain information.
 </p>
 
@@ -188,10 +231,9 @@ admin@atheriqlabs.org
 
 </div>
 
-<footer class="footer">
-<div class="footer-content">
-<div>AetherIQ Labs Private Limited</div>
-<div>admin@atheriqlabs.org</div>
+<footer>
+<div class="container">
+<p>AetherIQ Labs Pvt Ltd • Hyderabad, India</p>
 </div>
 </footer>
 
