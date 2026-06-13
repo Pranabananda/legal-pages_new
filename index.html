@@ -1,94 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AetherIQ Labs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AetherIQ Labs | Daily AI</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#F4F3E8;
-    color:#222;
+font-family:Arial,sans-serif;
+background:#F5F4EA;
+color:#222;
+line-height:1.7;
+}
+
+.hero{
+background:#262600;
+color:white;
+padding:80px 20px;
+}
+
+.hero-content{
+max-width:1100px;
+margin:auto;
+}
+
+.hero h1{
+font-size:72px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
 }
 
 .container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
 }
 
-h1{
-    font-size:70px;
-    margin-bottom:10px;
+.card{
+background:white;
+padding:40px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 h2{
-    font-size:52px;
-    margin-top:50px;
+font-size:58px;
+margin-bottom:20px;
 }
 
-p{
-    line-height:1.7;
+h3{
+margin-top:30px;
+margin-bottom:15px;
 }
 
-.features li{
-    margin-bottom:10px;
+ul{
+padding-left:25px;
+}
+
+li{
+margin-bottom:10px;
+}
+
+.nav-links{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+background:#262600;
+color:white;
+padding:12px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn:hover{
+opacity:.9;
 }
 
 .footer{
-    background:#262600;
-    color:white;
-    margin-top:80px;
+background:#262600;
+color:white;
+margin-top:80px;
 }
 
 .footer-content{
-    max-width:1000px;
-    margin:auto;
-    padding:50px 20px;
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:30px;
 }
 
-a{
-    color:#0A5DBB;
+.footer h3{
+margin-bottom:10px;
 }
 
 .footer a{
-    color:white;
+color:white;
+text-decoration:none;
 }
 
-.legal-links{
-    margin-top:30px;
-}
 </style>
 
 </head>
 <body>
 
-<div class="container">
-
+<header class="hero">
+<div class="hero-content">
 <h1>AetherIQ Labs</h1>
-
 <p>
 Building practical AI tools that help people communicate,
 learn, and work more effectively.
 </p>
+</div>
+</header>
+
+<div class="container">
+
+<div class="card">
 
 <h2>Daily AI</h2>
 
 <p>
 Daily AI is an intelligent writing and conversation assistant designed
 to help users generate messages, improve communication,
-translate content, explain concepts, and interact with AI using both
-text and voice.
+translate content, explain concepts, and interact with AI using
+both text and voice.
 </p>
 
 <h3>Features</h3>
 
-<ul class="features">
+<ul>
 <li>AI-powered message generation</li>
 <li>Voice-to-text input</li>
 <li>Multiple conversation styles and tones</li>
@@ -96,36 +156,30 @@ text and voice.
 <li>Premium subscription plans</li>
 </ul>
 
-<div class="legal-links">
-<h3>Legal</h3>
-
-<p>
-<a href="https://atheriqlabs.org/privacy/">Privacy Policy</a>
-</p>
-
-<p>
-<a href="https://atheriqlabs.org/terms/">Terms of Use</a>
-</p>
+<div class="nav-links">
+<a class="btn" href="/privacy/">Privacy Policy</a>
+<a class="btn" href="/terms/">Terms of Use</a>
+</div>
 
 </div>
 
 </div>
 
-<div class="footer">
+<footer class="footer">
 
 <div class="footer-content">
 
 <div>
 <h3>About Us</h3>
 <p>
-Hyderabad<br>
-Telangana<br>
+AetherIQ Labs Private Limited<br>
+Hyderabad, Telangana<br>
 India
 </p>
 </div>
 
 <div>
-<h3>Contact Us</h3>
+<h3>Contact</h3>
 <p>
 admin@atheriqlabs.org
 </p>
@@ -133,7 +187,7 @@ admin@atheriqlabs.org
 
 </div>
 
-</div>
+</footer>
 
 </body>
 </html>
